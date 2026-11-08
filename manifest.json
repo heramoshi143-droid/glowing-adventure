@@ -1,0 +1,23 @@
+{
+  "name": "WORLD AI",
+  "short_name": "WORLD AI",
+  "description": "One AI. Endless Possibilities.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#071326",
+  "theme_color": "#071326",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

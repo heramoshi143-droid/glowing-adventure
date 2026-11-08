@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071326">
+  <meta name="description" content="WORLD AI — One AI. Endless Possibilities.">
+  <title>WORLD AI</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="logo">W</div><div><b>WORLD AI</b><small>One AI. Endless Possibilities.</small></div></div>
+    <button class="btn primary full" id="newChat">＋ New chat</button>
+    <nav>
+      <button class="nav active" data-page="home">⌂ <span data-en="Home" data-ur="ہوم">Home</span></button>
+      <button class="nav" data-page="chat">◉ <span data-en="AI Chat" data-ur="اے آئی چیٹ">AI Chat</span></button>
+      <button class="nav" data-page="history">◷ <span data-en="History" data-ur="سابقہ چیٹس">History</span></button>
+      <button class="nav" data-page="studios">✦ <span data-en="AI Studios" data-ur="اے آئی اسٹوڈیوز">AI Studios</span></button>
+      <button class="nav" data-page="settings">⚙ <span data-en="Settings" data-ur="ترتیبات">Settings</span></button>
+    </nav>
+    <div class="side-status"><i></i><span id="connectionLabel">Demo mode</span><small>Connect a secure AI backend for live AI.</small></div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <button class="icon mobile-menu" id="menuBtn" aria-label="Menu">☰</button>
+      <div class="mobile-brand">WORLD <b>AI</b></div>
+      <div class="grow"></div>
+      <select id="language" aria-label="Language"><option value="en">English</option><option value="ur">اردو</option></select>
+      <button class="icon" id="headerNew" title="New chat">＋</button>
+    </header>
+
+    <section class="page active" id="home">
+      <div class="hero">
+        <div class="eyebrow">✦ YOUR INTELLIGENT COMPANION</div>
+        <h1>Ideas become<br><span>possibilities.</span></h1>
+        <p>Ask, create, learn and build — all in one place.</p>
+        <button class="btn primary" data-open="chat">Start a conversation →</button>
+        <div class="glow"></div>
+      </div>
+      <div class="section-title"><div><h2>Explore AI Studios</h2><p>Choose what you want to do today.</p></div></div>
+      <div class="studio-grid">
+        <button class="studio" data-studio="writing"><span>✍️</span><b>AI Writing</b><small>Letters, reports and ideas</small></button>
+        <button class="studio" data-studio="coding"><span>⌘</span><b>Coding Assistant</b><small>Learn and debug code</small></button>
+        <button class="studio" data-studio="learning"><span>🎓</span><b>Learning Tutor</b><small>Learn step by step</small></button>
+        <button class="studio" data-studio="image"><span>🎨</span><b>Image Studio</b><small>Create images from prompts</small></button>
+        <button class="studio" data-studio="voice"><span>🎙️</span><b>Voice Assistant</b><small>Speak to WORLD AI</small></button>
+        <button class="studio" data-studio="chat"><span>💬</span><b>AI Chat</b><small>Ask anything</small></button>
+      </div>
+      <p class="note">Tip: You can use English or Urdu. Live AI features need an internet connection and a configured backend.</p>
+    </section>
+
+    <section class="page" id="chat">
+      <div class="page-heading"><div class="eyebrow">WORLD AI CHAT</div><h2 id="chatHeading">Your conversation</h2><p>Ask a question or choose a quick action.</p></div>
+      <div class="messages" id="messages">
+        <div class="welcome"><div class="avatar">W</div><h2>Hello! I'm WORLD AI.</h2><p>How can I help you today?</p>
+          <div class="suggestions"><button data-prompt="Write a professional email for me">Write an email</button><button data-prompt="Teach me artificial intelligence from the beginning">Learn AI</button><button data-prompt="Help me build an Android app">Build an app</button></div>
+        </div>
+      </div>
+      <div class="composer-wrap">
+        <div class="composer"><button class="icon" id="micBtn" title="Speak">🎙️</button><textarea id="message" rows="1" placeholder="Message WORLD AI..."></textarea><button class="send" id="sendBtn" aria-label="Send">↑</button></div>
+        <div class="composer-foot" id="chatStatus">Demo replies are local examples until you connect an AI backend.</div>
+      </div>
+    </section>
+
+    <section class="page" id="history">
+      <div class="page-heading"><div class="eyebrow">YOUR WORKSPACE</div><h1>Chat history</h1><p>Conversations saved on this device.</p></div>
+      <div class="history-tools"><input id="historySearch" placeholder="Search chats..."><button class="btn outline" id="clearHistory">Clear all</button></div>
+      <div id="historyList" class="history-list"></div>
+    </section>
+
+    <section class="page" id="studios">
+      <div class="page-heading"><div class="eyebrow">FOCUSED WORKSPACES</div><h1>AI Studios</h1><p>Select a workspace to get started.</p></div>
+      <div class="studio-grid">
+        <button class="studio" data-studio="writing"><span>✍️</span><b>AI Writing</b><small>Draft letters, reports and emails.</small></button>
+        <button class="studio" data-studio="coding"><span>⌘</span><b>Coding Assistant</b><small>Explain and debug code.</small></button>
+        <button class="studio" data-studio="learning"><span>🎓</span><b>Learning Tutor</b><small>Learn and practise.</small></button>
+        <button class="studio" data-studio="image"><span>🎨</span><b>Image Studio</b><small>Generate images from text.</small></button>
+        <button class="studio" data-studio="voice"><span>🎙️</span><b>Voice Assistant</b><small>Speak and listen.</small></button>
+      </div>
+    </section>
+
+    <section class="page" id="settings">
+      <div class="page-heading"><div class="eyebrow">MAKE IT YOURS</div><h1>Settings</h1><p>Personalize your experience.</p></div>
+      <div class="panel">
+        <label class="setting"><span><b>Language</b><small>Choose English or Urdu.</small></span><select id="languageSetting"><option value="en">English</option><option value="ur">اردو</option></select></label>
+        <label class="setting"><span><b>Response tone</b><small>Choose the assistant's style.</small></span><select id="tone"><option value="friendly">Friendly</option><option value="professional">Professional</option><option value="concise">Concise</option><option value="creative">Creative</option></select></label>
+        <label class="setting"><span><b>AI backend URL</b><small>Optional. Use your secure server address.</small></span><input id="apiUrl" type="url" placeholder="https://your-server.example.com"></label>
+        <button class="btn primary" id="saveSettings">Save settings</button>
+      </div>
+      <p class="note">Never paste a private AI API key into this app. Keep keys on a secure server.</p>
+    </section>
+  </main>
+</div>
+
+<dialog id="imageDialog">
+  <div class="dialog-head"><h2>Image Studio</h2><button class="icon" id="closeImage">✕</button></div>
+  <p>Describe the image you want to create.</p>
+  <textarea id="imagePrompt" rows="3" placeholder="A beautiful mountain landscape at sunrise..."></textarea>
+  <button class="btn primary full" id="generateImage">Generate image</button>
+  <p class="small" id="imageStatus">Image generation requires a configured image API on your secure backend.</p>
+  <img id="generatedImage" alt="Generated image" hidden>
+</dialog>
+<div class="toast" id="toast" role="status"></div>
+<script src="app.js"></script>
+</body></html>
